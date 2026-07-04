@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #aca29b;
+  background: #a597e1d8;
   color: #333;
   margin: 0;
   padding: 20px;
@@ -44,3 +44,26 @@ h1 {
 * {
   cursor: url('https://cdn.cursors-4u.net/css-previews/cute-tan-music-note-bb2fb6c9-css.webp') 5 0, auto !important;
 }
+h2{
+    font-family: 'Segoe UI', sans-serif;
+    color: #1d1c1c;
+
+}
+ table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2em;
+    }
+    a:hover {
+      color: #0077cc;
+    }
