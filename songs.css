@@ -1,0 +1,46 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #aca29b;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #1d1c1c;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+  font-size: 2.5em;
+}
+
+.song-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.song {
+  background: #e8f6ff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.song:hover {
+  transform: scale(1.05);
+}
+
+.song h2 {
+  margin: 0;
+  color: #0066cc;
+}
+
+.song p {
+  margin: 5px 0 0;
+  font-style: italic;
+}
+* {
+  cursor: url('https://cdn.cursors-4u.net/css-previews/cute-tan-music-note-bb2fb6c9-css.webp') 5 0, auto !important;
+}
