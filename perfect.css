@@ -35,7 +35,7 @@ body {
   color: #201f1f;
   font-size: 24px;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
-  
+  margin-top: 40px;
 }
 
 
@@ -55,10 +55,12 @@ body {
   font-weight: bold;
 }
 #tips {
-  color: #7b5b3b;
+  color: #ff1b1b;
   font-weight: bold;
-  background-color: #ffffff;
+  background-color: #e2f5a7;
   text-align: left;
   font-size: 16px;
   font-family: arial;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
