@@ -8,11 +8,11 @@ body {
 
 
 .song-container {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   border-radius: 8px;
 }
 
@@ -32,13 +32,15 @@ body {
 
 .lyrics h2 {
   text-align: center;
-  color: #444;
-  margin-bottom: 10px;
+  color: #201f1f;
+  font-size: 24px;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  
 }
 
 
 .lyrics pre {
-  background: #f9f9f9;
+  background: #ffffff;
   padding: 15px;
   border-radius: 5px;
   font-size: 14px;
@@ -51,4 +53,12 @@ body {
 #hds {
   color: #0066cc;
   font-weight: bold;
+}
+#tips {
+  color: #7b5b3b;
+  font-weight: bold;
+  background-color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  font-family: arial;
 }
