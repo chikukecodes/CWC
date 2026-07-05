@@ -3,11 +3,11 @@ body {
   background: #fdfdfd;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 24px;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-body.theme-pink {
+body.theme-soft {
   --page-bg: linear-gradient(135deg, #fff5f8 0%, #ffe7f0 45%, #f4e7ff 100%);
   --card-bg: rgba(255,255,255,0.96);
   --text-color: #2f2235;
@@ -17,20 +17,26 @@ body.theme-pink {
   --section-bg: #fff8fb;
   --button-bg: linear-gradient(90deg, #ffedf4, #ffe7f0);
   --button-text: #8a315c;
+  --table-hover-bg: rgba(180, 125, 95, 0.13);
+  --table-header-bg: #e8cfae;
+  --table-border-color: rgba(109, 79, 64, 0.18);
   background: var(--page-bg);
   color: var(--text-color);
 }
 
-body.theme-blue {
-  --page-bg: linear-gradient(135deg, #f2fbff 0%, #dfefff 45%, #e8f7f2 100%);
-  --card-bg: rgba(255,255,255,0.96);
-  --text-color: #213b4d;
-  --heading-color: #0f6c8a;
-  --accent-color: #2579a8;
-  --border-color: rgba(87, 144, 180, 0.2);
-  --section-bg: #f6fbff;
-  --button-bg: linear-gradient(90deg, #eef8ff, #f8fcff);
-  --button-text: #2b5f7d;
+body.theme-dark {
+  --page-bg: linear-gradient(135deg, #1e2021 0%, #2d2e2f 45%, #1a1b1d 100%);
+  --card-bg: rgba(33, 33, 34, 0.92);
+  --text-color: #e7dfd0;
+  --heading-color: #c0a77c;
+  --accent-color: #9f8465;
+  --border-color: rgba(192, 167, 124, 0.18);
+  --section-bg: #2a2b2d;
+  --button-bg: linear-gradient(90deg, #4b433d, #6a5a4b);
+  --button-text: #f2e8d8;
+  --table-hover-bg: rgba(192, 167, 124, 0.16);
+  --table-header-bg: #6b5943;
+  --table-border-color: rgba(192, 167, 124, 0.25);
   background: var(--page-bg);
   color: var(--text-color);
 }
@@ -55,47 +61,66 @@ h1 {
   color: var(--heading-color);
   font-family: 'Georgia', serif;
   font-size: 2.5em;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
 }
 
 .section {
-  margin: 30px 0;
+  margin: 32px 0;
+  padding: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .section h2 {
   color: var(--accent-color);
   border-bottom: 2px solid var(--border-color);
-  padding-bottom: 5px;
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+}
 
 table {
   width: 100%;
-  table-layout: fixed;   
+  table-layout: fixed;
   border-collapse: collapse;
-  margin-top: 15px;
+  margin-top: 6px;
+  background: var(--card-bg);
+  overflow: hidden;
 }
 
 th, td {
-  border: 1px solid #ccc;
+  border: 1px solid var(--table-border-color);
   padding: 12px;
   text-align: center;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 
 th {
-  background: #cab88a;
-  
+  background: var(--table-header-bg);
+  color: #433225;
+  font-weight: 700;
 }
 
 tr:hover {
-  background-color: #d9e0a9;
+  background-color: var(--table-hover-bg);
+  transition: background-color 0.2s ease;
 }
 
 .tips {
   background: var(--section-bg);
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin-top: 18px;
+  border: 1px solid var(--border-color);
+  line-height: 1.6;
 }
 * {
   cursor: url('https://cdn.cursors-4u.net/css-previews/cute-tan-music-note-bb2fb6c9-css.webp') 5 0, auto !important;

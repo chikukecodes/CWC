@@ -3,19 +3,19 @@
   const buttonSelector = '.theme-toggle';
 
   function applyTheme(theme) {
-    document.body.classList.remove('theme-blue', 'theme-pink');
-    document.body.classList.add(theme === 'pink' ? 'theme-pink' : 'theme-blue');
+    document.body.classList.remove('theme-dark', 'theme-soft');
+    document.body.classList.add(theme === 'soft' ? 'theme-soft' : 'theme-dark');
 
     const button = document.querySelector(buttonSelector);
     if (button) {
-      button.setAttribute('aria-pressed', String(theme === 'pink'));
-      button.textContent = theme === 'pink' ? '🌊 Blue Theme' : '🌸 Pink Theme';
+      button.setAttribute('aria-pressed', String(theme === 'soft'));
+      button.textContent = theme === 'soft' ? '🌙 Dark Theme' : '🌿 Soft Theme';
     }
   }
 
   function initTheme() {
     const savedTheme = localStorage.getItem(storageKey);
-    const theme = savedTheme === 'pink' ? 'pink' : 'blue';
+    const theme = savedTheme === 'soft' ? 'soft' : 'dark';
     applyTheme(theme);
   }
 
@@ -25,8 +25,8 @@
     const button = document.querySelector(buttonSelector);
     if (button) {
       button.addEventListener('click', function () {
-        const currentTheme = document.body.classList.contains('theme-pink') ? 'pink' : 'blue';
-        const nextTheme = currentTheme === 'pink' ? 'blue' : 'pink';
+        const currentTheme = document.body.classList.contains('theme-soft') ? 'soft' : 'dark';
+        const nextTheme = currentTheme === 'soft' ? 'dark' : 'soft';
         localStorage.setItem(storageKey, nextTheme);
         applyTheme(nextTheme);
       });

@@ -16,14 +16,14 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-body.theme-pink {
-  --card-bg: rgba(255,255,255,0.96);
-  --text-color: #2f2235;
-  --heading-color: #b23a6f;
-  --accent-color: #c4457b;
-  --border-color: rgba(233, 119, 167, 0.2);
-  --button-bg: linear-gradient(90deg, #ffedf4, #ffe7f0);
-  --button-text: #8a315c;
+body.theme-soft {
+  --card-bg: rgba(247, 240, 233, 0.94);
+  --text-color: #3f342f;
+  --heading-color: #8a5b58;
+  --accent-color: #a16d67;
+  --border-color: rgba(138, 91, 88, 0.18);
+  --button-bg: linear-gradient(90deg, #e7d7cf, #efe0d7);
+  --button-text: #6a4f44;
   background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.28)), url('Copilot_20260701_133014.png');
   background-size: cover;
   background-position: center;
@@ -31,14 +31,14 @@ body.theme-pink {
   color: var(--text-color);
 }
 
-body.theme-blue {
-  --card-bg: rgba(255,255,255,0.96);
-  --text-color: #213b4d;
-  --heading-color: #0f6c8a;
-  --accent-color: #2579a8;
-  --border-color: rgba(87, 144, 180, 0.2);
-  --button-bg: linear-gradient(90deg, #eef8ff, #f8fcff);
-  --button-text: #2b5f7d;
+body.theme-dark {
+  --card-bg: rgba(34, 35, 37, 0.92);
+  --text-color: #e7dfd0;
+  --heading-color: #c0a77c;
+  --accent-color: #9f8465;
+  --border-color: rgba(192, 167, 124, 0.18);
+  --button-bg: linear-gradient(90deg, #4b433d, #6a5a4b);
+  --button-text: #f2e8d8;
   background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.28)), url('Copilot_20260701_133014.png');
   background-size: cover;
   background-position: center;

@@ -11,7 +11,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-body.theme-pink {
+body.theme-soft {
   --page-bg: linear-gradient(135deg, #fff5f8 0%, #ffe7f0 45%, #f4e7ff 100%);
   --card-bg: rgba(255,255,255,0.96);
   --text-color: #2f2235;
@@ -26,17 +26,17 @@ body.theme-pink {
   color: var(--text-color);
 }
 
-body.theme-blue {
-  --page-bg: linear-gradient(135deg, #f2fbff 0%, #dfefff 45%, #e8f7f2 100%);
-  --card-bg: rgba(255,255,255,0.96);
-  --text-color: #213b4d;
-  --heading-color: #0f6c8a;
-  --accent-color: #2579a8;
-  --border-color: rgba(87, 144, 180, 0.2);
-  --panel-bg: linear-gradient(145deg, #f8fcff, #eef8ff);
-  --panel-border: #d9ebf7;
-  --button-bg: linear-gradient(90deg, #eef8ff, #f8fcff);
-  --button-text: #2b5f7d;
+body.theme-dark {
+  --page-bg: linear-gradient(135deg, #1e2021 0%, #2d2e2f 45%, #1a1b1d 100%);
+  --card-bg: rgba(33, 33, 34, 0.92);
+  --text-color: #e7dfd0;
+  --heading-color: #c0a77c;
+  --accent-color: #9f8465;
+  --border-color: rgba(192, 167, 124, 0.18);
+  --panel-bg: linear-gradient(145deg, #2a2b2d, #252628);
+  --panel-border: #3d3f42;
+  --button-bg: linear-gradient(90deg, #4b433d, #6a5a4b);
+  --button-text: #f2e8d8;
   background: var(--page-bg);
   color: var(--text-color);
 }
