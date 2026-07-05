@@ -1,71 +1,147 @@
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0bd76;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 24px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f2fbff 0%, #dfefff 45%, #e8f7f2 100%);
+  color: #213b4d;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+body.theme-pink {
+  --page-bg: linear-gradient(135deg, #fff5f8 0%, #ffe7f0 45%, #f4e7ff 100%);
+  --card-bg: rgba(255,255,255,0.96);
+  --text-color: #2f2235;
+  --heading-color: #b23a6f;
+  --accent-color: #c4457b;
+  --border-color: rgba(233, 119, 167, 0.2);
+  --panel-bg: linear-gradient(145deg, #fffafc, #fff2f8);
+  --panel-border: #f3dce7;
+  --button-bg: linear-gradient(90deg, #ffedf4, #ffe7f0);
+  --button-text: #8a315c;
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+body.theme-blue {
+  --page-bg: linear-gradient(135deg, #f2fbff 0%, #dfefff 45%, #e8f7f2 100%);
+  --card-bg: rgba(255,255,255,0.96);
+  --text-color: #213b4d;
+  --heading-color: #0f6c8a;
+  --accent-color: #2579a8;
+  --border-color: rgba(87, 144, 180, 0.2);
+  --panel-bg: linear-gradient(145deg, #f8fcff, #eef8ff);
+  --panel-border: #d9ebf7;
+  --button-bg: linear-gradient(90deg, #eef8ff, #f8fcff);
+  --button-text: #2b5f7d;
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
 
 .song-container {
   max-width: 1000px;
-  margin: auto;
-  background: #ffffff;
-  padding: 20px;
-  border: 1px solid #ffffff;
-  border-radius: 8px;
+  margin: 20px auto;
+  background: var(--card-bg);
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  box-shadow: 0 16px 45px rgba(43, 90, 129, 0.16);
+  border: 1px solid var(--border-color);
 }
 
+.song-hero {
+  text-align: center;
+  padding: 18px 12px 24px;
+  border-bottom: 2px solid #dceef8;
+  margin-bottom: 24px;
+}
 
 .song-container h1 {
-  text-align: center;
-  color: #333;
+  margin: 0 0 8px;
+  font-size: 2.4rem;
+  color: var(--heading-color);
+  letter-spacing: 1px;
 }
 
-
 .singer {
-  text-align: center;
+  margin: 0;
   font-style: italic;
-  color: #555;
-  margin-bottom: 20px;
+  color: #5b7486;
+  font-size: 1rem;
 }
 
 .lyrics h2 {
   text-align: center;
-  color: #201f1f;
-  font-size: 24px;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  margin-top: 80px;
+  color: var(--accent-color);
+  font-size: 1.45rem;
+  margin: 10px 0 18px;
+  letter-spacing: 0.5px;
 }
-
 
 .lyrics pre {
-  background: #ffffff;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #222;
+  background: var(--panel-bg);
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-color);
   overflow-x: auto;
+  border: 1px solid var(--panel-border);
+  white-space: pre-wrap;
 }
-
 
 #hds {
-  color: #0066cc;
-  font-weight: bold;
-  font-size: 1.9em;
-  margin-bottom: 70px;
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 16px 0 8px;
+  letter-spacing: 0.3px;
 }
+
 #tips {
-  color: #ff1b1b;
-  font-weight: bold;
-  background-color: #e2f5a7;
+  color: var(--button-text);
+  font-weight: 600;
+  background: var(--panel-bg);
   text-align: left;
-  font-size: 16px;
-  font-family: arial;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  font-size: 0.98rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 10px;
+  margin: 10px 0 18px;
 }
-strong{
-   color:#ec104e
+
+strong {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 12px;
+  }
+
+  .song-container {
+    padding: 20px 16px 24px;
+  }
+
+  .song-container h1 {
+    font-size: 1.8rem;
+  }
 }

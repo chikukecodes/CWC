@@ -5,27 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Songs with the Chords</title>
   <link rel="stylesheet" href="songs.css">
- 
 </head>
 <body>
-  <h1>🎶 Songs with Their Chords 🎶</h1>
+  <button class="theme-toggle" type="button" aria-pressed="false">🌊 Blue Theme</button>
+  <div class="page-shell">
+    <div class="hero">
+      <p class="eyebrow">Your favorite chords</p>
+      <h1>🎶 Songs with Their Chords 🎶</h1>
+      <p class="subtitle">Pick a song and start playing.</p>
+    </div>
 
-  <table class="song-list">
-    <tr>
-      <td><a href="perfect.html" target="_blank"><strong>Perfect</strong> (Ed Sheeran)</a></td>
-    </tr>
-    <tr>
-      <td><a href="aadat.html" target="_blank"><strong>Aadat</strong> (Atif Aslam)</a></td>
-    </tr>
-    <tr>
-      <td><a href="something-about-you.html" target="_blank"><strong>Something About You</strong> (Dent May)</a></td>
-    </tr>
-    <tr>
-      <td><a href="tum-hi-ho.html" target="_blank"><strong>Tum Hi Ho</strong> (Arijit Singh)</a></td>
-    </tr>
-    <tr>
-      <td><a href="tera-mera-rishta.html" target="_blank"><strong>Tera Mera Rishta Purana</strong> (Mustafa Zahid)</a></td>
-    </tr>
-  </table>
+    <div class="song-list">
+      <a class="song-card" href="perfect.html" target="_blank">
+        <span class="song-title">Perfect</span>
+        <span class="song-artist">Ed Sheeran</span>
+      </a>
+      <a class="song-card" href="aadat.html" target="_blank">
+        <span class="song-title">Aadat</span>
+        <span class="song-artist">Atif Aslam</span>
+      </a>
+      <a class="song-card" href="something-about-you.html" target="_blank">
+        <span class="song-title">Something About You</span>
+        <span class="song-artist">Dent May</span>
+      </a>
+      <a class="song-card" href="tum-hi-ho.html" target="_blank">
+        <span class="song-title">Tum Hi Ho</span>
+        <span class="song-artist">Arijit Singh</span>
+      </a>
+      <a class="song-card" href="tera-mera-rishta.html" target="_blank">
+        <span class="song-title">Tera Mera Rishta Purana</span>
+        <span class="song-artist">Mustafa Zahid</span>
+      </a>
+    </div>
+  </div>
+  <script src="theme.js"></script>
 </body>
 </html>

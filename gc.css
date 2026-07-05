@@ -2,86 +2,171 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+  min-height: 100vh;
   color: #fff;
-  background-image: url('Copilot_20260701_133014.png');
+  background-color: #050506;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.28)), url('Copilot_20260701_133014.png');
   background-size: cover;
-  cursor: url('guitar-292749af-32.cur'),0 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.theme-pink {
+  --card-bg: rgba(255,255,255,0.96);
+  --text-color: #2f2235;
+  --heading-color: #b23a6f;
+  --accent-color: #c4457b;
+  --border-color: rgba(233, 119, 167, 0.2);
+  --button-bg: linear-gradient(90deg, #ffedf4, #ffe7f0);
+  --button-text: #8a315c;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.28)), url('Copilot_20260701_133014.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+}
+
+body.theme-blue {
+  --card-bg: rgba(255,255,255,0.96);
+  --text-color: #213b4d;
+  --heading-color: #0f6c8a;
+  --accent-color: #2579a8;
+  --border-color: rgba(87, 144, 180, 0.2);
+  --button-bg: linear-gradient(90deg, #eef8ff, #f8fcff);
+  --button-text: #2b5f7d;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.28)), url('Copilot_20260701_133014.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.hero-card {
+  width: min(860px, calc(100% - 32px));
+  background: rgba(10, 12, 20, 0.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 24px;
+  padding: 36px 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+  text-align: center;
 }
 
 header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 10px 0 20px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
+  color: #ffd86b;
+  font-weight: 700;
 }
 
 header h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 header p {
-  font-size: 1.2em;
-  color: #ccc;
+  font-size: 1.1rem;
+  color: #f2f2f2;
+  margin: 0;
+}
+
+header h3 {
+  margin: 14px auto 0;
+  max-width: 650px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e8e8e8;
 }
 
 nav {
-  text-align: center;
-  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 24px 0 10px;
 }
 
 nav a {
-    font-size: 1.5em;
-  text-decoration:none;
+  font-size: 1.05rem;
+  text-decoration: none;
   color: #ffd20a;
-  margin: 0 15px;
-  font-weight: bold;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
 }
- 
+
 nav a:hover {
-  
-  text-shadow: 0 0 10px #000000;
+  background: rgba(255,255,255,0.16);
+  transform: translateY(-2px);
+  text-shadow: none;
 }
 
 .cta {
   text-align: center;
-  margin: 50px 0;
+  margin: 24px 0 8px;
 }
 
 .cta button {
-  background: #ffcc00;
+  background: linear-gradient(90deg, #ffcc00, #ffb300);
   border: none;
-  padding: 15px 30px;
-  font-size: 1.2em;
+  padding: 14px 28px;
+  font-size: 1.1rem;
   cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 700;
+  color: #111;
 }
 
 .cta button:hover {
-  
-  background: linear-gradient(45deg, #b2b20a, #39ff14, #ffff00);
-  box-shadow: 0 0 15px #39ff14;
-  transition: 0.4s ease;
-
-
-
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 195, 0, 0.25);
 }
 
 footer {
   text-align: center;
-  padding: 10px;
-  background: #111;
-  color: #888;
-  position: relative;
-  margin-top: auto;
-  bottom: 0;
+  padding: 16px 10px 8px;
+  color: #ddd;
+  font-size: 0.95rem;
 }
+
 strong {
-  color: #e44141;
+  color: #ff7a7a;
 }
 
 button {
-    font-family: 'verdana', sans-serif;
+  font-family: 'verdana', sans-serif;
 }
 
 
