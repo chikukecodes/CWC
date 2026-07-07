@@ -60,7 +60,7 @@ body.theme-dark {
   background: var(--card-bg);
   padding: 28px 32px 36px;
   border-radius: 24px;
-  box-shadow: 0 16px 45px rgba(43, 90, 129, 0.16);
+  
   border: 1px solid var(--border-color);
 }
 
@@ -121,8 +121,8 @@ body.theme-dark {
   text-align: left;
   font-size: 0.98rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 14px 16px;
-  border-left: 4px solid var(--accent-color);
+  padding: 10px 10px;
+  border: 4px solid var(--accent-color);
   border-radius: 10px;
   margin: 10px 0 18px;
 }
